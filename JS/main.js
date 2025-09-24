@@ -1,3 +1,4 @@
+// Initialize Firebase (pakai config project-kulia)
 var config = {
   apiKey: "AIzaSyCHkrZXPXFaJVJ0KQi61YFvhCVvPFqPKQQ",
   authDomain: "project-kulia.firebaseapp.com",
@@ -8,4 +9,6 @@ var config = {
   appId: "1:750088065097:web:356840bcb44d01b05e098",
   measurementId: "G-XQP8CJ0FS2"
 };
-firebase.initializeApp.(config);
+
+// Inisialisasi Firebase v8
+firebase.initializeApp(config);
