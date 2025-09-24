@@ -15,10 +15,10 @@ function SignIn() {
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
       // ganti UID sesuai yang ada di Authentication → Users
-      if (firebaseUser.uid == "UID_ADMIN_BARU") {
+      if (firebaseUser.uid == "GjVZDNtbijO5AMBKnA6TEGvzFiC3") {
         location.href = "admin.html";
       }
-      else if (firebaseUser.uid == "UID_CASHIER_BARU") {
+      else if (firebaseUser.uid == "5vKaAsDk9mXRxdGdscFaRi82lOf2") {
         location.href = "cashier.html";
       }
     }
