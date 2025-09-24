@@ -4,7 +4,7 @@ var txtpass = "";
 
 function SignIn() {
   // email pakai domain project kamu
-  txtuser = document.getElementById('username').value + "@project-kulia.firebaseapp.com";
+  txtuser = document.getElementById('username').value;
   txtpass = document.getElementById('password').value;
 
   firebase.auth().signInWithEmailAndPassword(txtuser, txtpass).catch(function(error) {
