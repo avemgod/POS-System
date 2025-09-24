@@ -1,5 +1,6 @@
 //database reference
-var itemsRef = firebase.database().ref().child("Items");
+
+var itemsRef = firebase.database().ref("Items");
 
 //View Stock
 itemsRef.on("child_added",snap=>{
