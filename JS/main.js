@@ -1,11 +1,10 @@
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyCFgV_ID6n3BnIr4J1WhznAdB5iqjVm50Y",
-    authDomain: "pos-system-778dd.firebaseapp.com",
-    databaseURL: "https://pos-system-778dd.firebaseio.com",
-    projectId: "pos-system-778dd",
-    storageBucket: "pos-system-778dd.appspot.com",
-    messagingSenderId: "826306046330"
-    };
-firebase.initializeApp(config);
-
+const firebaseConfig = {
+  apiKey: "AIzaSyCHkrZXPXFaJVJ0KQi61YFvhCVvPFqPKQQ",
+  authDomain: "project-kulia.firebaseapp.com",
+  databaseURL: "https://project-kulia-default-rtdb.firebaseio.com",
+  projectId: "project-kulia",
+  storageBucket: "project-kulia.appspot.com",
+  messagingSenderId: "750088065097",
+  appId: "1:750088065097:web:356840bcb44d01b05e098",
+  measurementId: "G-XQP8CJ0FS2"
+};
