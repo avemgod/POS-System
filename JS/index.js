@@ -1,33 +1,34 @@
-var database=firebase.database();
-var txtuser="";
-var txtpass="";
-function SignIn(){
-  txtuser=document.getElementById('username').value+"@pos-system-778dd.appspot.com";
-  txtpass=document.getElementById('password').value;
+var database = firebase.database();
+var txtuser = "";
+var txtpass = "";
+
+function SignIn() {
+  // email pakai domain project kamu
+  txtuser = document.getElementById('username').value + "@project-kulia.firebaseapp.com";
+  txtpass = document.getElementById('password').value;
 
   firebase.auth().signInWithEmailAndPassword(txtuser, txtpass).catch(function(error) {
-    window.alert(error.message)
-    location.href="index.html";
+    window.alert(error.message);
+    location.href = "index.html";
   });
 
-  firebase.auth().onAuthStateChanged(firebaseUser =>{
-    if(firebaseUser){
-      if(firebaseUser.uid=="UNXtA8yh5KN2HfgqofmUjDVMZCv1"){
-        location.href="admin.html";
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+    if (firebaseUser) {
+      // ganti UID sesuai yang ada di Authentication → Users
+      if (firebaseUser.uid == "UID_ADMIN_BARU") {
+        location.href = "admin.html";
       }
-      else if(firebaseUser.uid=="mWKap68CpVRTGDcDEsOrH9kimjw2"){
-        location.href="cashier.html";
+      else if (firebaseUser.uid == "UID_CASHIER_BARU") {
+        location.href = "cashier.html";
       }
     }
   });
 }
 
-function SignOut()
-{
+function SignOut() {
   firebase.auth().signOut().then(function() {
-    // Sign-out successful.
-    location.href="index.html";
+    location.href = "index.html";
   }).catch(function(error) {
-    // An error happened.
+    console.log(error.message);
   });
 }
